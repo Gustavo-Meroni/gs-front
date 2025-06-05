@@ -15,22 +15,25 @@
       class="fixed top-0 left-0 w-full bg-gradient-to-r from-blue-600 via-blue-500 to-blue-400 shadow-lg z-50"
     >
       <div
-        class="container mx-auto px-6 md:px-12 flex items-center justify-between h-16"
+        class="container mx-auto px-4 sm:px-6 lg:px-12 flex items-center justify-between h-16"
       >
         <!-- Logo + Nome -->
-        <a href="#" class="flex items-center gap-0">
+        <a href="#" class="flex items-center gap-2">
           <img
             src="assets/dropwater.svg"
             alt="Logo do Projeto"
-            class="h-12 w-12 object-contain"
+            class="h-10 w-10 object-contain"
           />
-          <span class="text-white text-xl font-semibold tracking-wide"
+          <span
+            class="text-white text-xl sm:text-2xl font-semibold tracking-wide"
             >Flood Tech</span
           >
         </a>
 
         <!-- Menu Desktop -->
-        <nav class="hidden md:flex gap-10 font-semibold text-slate-200">
+        <nav
+          class="hidden md:flex gap-6 lg:gap-10 font-semibold text-slate-200"
+        >
           <a href="#sobre" class="hover:text-white transition">Sobre</a>
           <a href="#problema" class="hover:text-white transition">Problema</a>
           <a href="#solucao" class="hover:text-white transition">Solução</a>
@@ -41,26 +44,13 @@
           <a href="#contato" class="hover:text-white transition">Contato</a>
         </nav>
 
-        <!-- Botão Hamburger Mobile -->
+        <!-- Botão Hamburger Mobile com ícone Lucide -->
         <button
           id="btn-menu"
           aria-label="Abrir menu"
           class="md:hidden text-slate-200 hover:text-white focus:outline-none"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-8 w-8"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            stroke-width="2"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M4 8h16M4 16h16"
-            />
-          </svg>
+          <i data-lucide="menu" class="w-8 h-8"></i>
         </button>
       </div>
 
@@ -102,38 +92,101 @@
       </nav>
     </header>
 
-    <!-- Conteúdo principal -->
     <main class="pt-20 container mx-auto px-6 md:px-12">
-      <!-- Seções virão aqui -->
+      <section id="sobre" class="pt-24 pb-12 bg-slate-100 text-gray-800">
+        <div
+          class="container mx-auto px-4 flex flex-col-reverse md:flex-row items-center gap-8"
+        >
+          <!-- Texto -->
+          <div class="md:w-1/2 text-center md:text-left">
+            <h2 class="text-3xl font-bold mb-4">Sobre o Projeto</h2>
+            <p class="text-lg text-gray-600 mb-4">
+              O <strong>Flood Tech</strong> nasceu para enfrentar o desafio das
+              enchentes de forma inovadora e tecnológica. Na imagem, vemos
+              sensores Arduino coletando dados em tempo real durante a chuva,
+              enquanto uma torre de celular garante a transmissão dessas
+              informações. Nosso projeto combina sensores inteligentes,
+              inteligência artificial e análise de dados para criar um sistema
+              de monitoramento e alerta instantâneo, prevenindo tragédias e
+              salvando vidas.
+            </p>
+            <p class="text-lg text-gray-600 mb-6">
+              Integrando informações de satélites, estações meteorológicas e
+              sensores IoT, o Flood Tech detecta rapidamente a possibilidade de
+              alagamentos e envia alertas SMS para as pessoas em áreas de risco,
+              promovendo cidades mais seguras, resilientes e preparadas para o
+              futuro.
+            </p>
+            <a
+              href="#problema"
+              class="inline-block bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition duration-300 shadow-md"
+            >
+              Saiba Mais
+            </a>
+          </div>
+
+          <!-- Imagem ilustrativa -->
+          <div class="md:w-1/2 flex justify-center">
+            <img
+              src="assets/sensores-monitoramento.png"
+              alt="Ilustração de sensores e dados monitorando enchentes"
+              class="w-full max-w-lg rounded-lg shadow-lg"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section id="problema" class="py-16 bg-white text-gray-900">
+        <div class="container mx-auto px-6 lg:px-12 max-w-6xl">
+          <h2 class="text-3xl font-bold mb-8 text-center text-blue-700">
+            O Problema das Enchentes no Brasil
+          </h2>
+          <p
+            class="text-lg leading-relaxed max-w-4xl mx-auto text-center text-gray-700 mb-6"
+          >
+            As enchentes são uma das maiores ameaças ambientais e urbanas que
+            afetam milhares de brasileiros todos os anos. Além dos prejuízos
+            materiais, elas causam transtornos graves à mobilidade, saúde e
+            segurança da população.
+          </p>
+          <p
+            class="text-lg leading-relaxed max-w-4xl mx-auto text-center text-gray-700 mb-6"
+          >
+            As soluções atuais, muitas vezes, são reativas e pouco integradas,
+            dificultando a previsão e o alerta antecipado para áreas de risco. A
+            falta de monitoramento em tempo real e comunicação eficiente pode
+            transformar uma chuva intensa em uma tragédia anunciada.
+          </p>
+          <p
+            class="text-lg leading-relaxed max-w-4xl mx-auto text-center text-gray-700"
+          >
+            É urgente modernizar o sistema de prevenção, combinando tecnologia e
+            dados para proteger vidas e patrimônios, especialmente em regiões
+            urbanas vulneráveis.
+          </p>
+        </div>
+      </section>
     </main>
 
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
     <script>
+      // Inicializa os ícones Lucide
+      lucide.createIcons();
+
       const btnMenu = document.getElementById('btn-menu');
       const menuMobile = document.getElementById('menu-mobile');
 
       btnMenu.addEventListener('click', () => {
         menuMobile.classList.toggle('hidden');
 
-        if (!menuMobile.classList.contains('hidden')) {
-          btnMenu.innerHTML = `
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-slate-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          `;
-        } else {
-          btnMenu.innerHTML = `
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-slate-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M4 8h16M4 16h16" />
-            </svg>
-          `;
-        }
-      });
+        const icon = btnMenu.querySelector('i');
+        icon.setAttribute(
+          'data-lucide',
+          menuMobile.classList.contains('hidden') ? 'menu' : 'x',
+        );
 
-      // Inicializa os ícones lucide
-      window.addEventListener('load', () => {
-        if (window.lucide) {
-          window.lucide.replace();
-        }
+        // Atualiza ícones do Lucide
+        lucide.createIcons();
       });
     </script>
   </body>
