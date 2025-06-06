@@ -1,20 +1,41 @@
 document.addEventListener('DOMContentLoaded', () => {
-  lucide.replace();
+  lucide.createIcons();
 
-  const menuBtn = document.getElementById('menu-btn');
-  const menuMobile = document.getElementById('menu-mobile'); // menu mobile
+  const menuBtn = document.getElementById('btn-menu'); // <- alterado aqui
+  const menuMobile = document.getElementById('menu-mobile');
 
-  menuBtn.addEventListener('click', () => {
-    const isExpanded = menuBtn.getAttribute('aria-expanded') === 'true';
+  if (menuBtn && menuMobile) {
+    const menuLinks = menuMobile.querySelectorAll('a');
 
-    menuBtn.setAttribute('aria-expanded', String(!isExpanded));
+    menuBtn.addEventListener('click', () => {
+      const isExpanded = menuBtn.getAttribute('aria-expanded') === 'true';
+      menuBtn.setAttribute('aria-expanded', String(!isExpanded));
+      menuMobile.classList.toggle('hidden');
 
-    menuMobile.classList.toggle('hidden'); // alterna menu mobile
+      menuBtn.innerHTML = isExpanded
+        ? '<i data-lucide="menu"></i>'
+        : '<i data-lucide="x"></i>';
 
-    menuBtn.innerHTML = isExpanded
-      ? '<i data-lucide="menu"></i>'
-      : '<i data-lucide="x"></i>';
+      lucide.createIcons();
+    });
 
-    lucide.replace();
-  });
+    menuLinks.forEach((link) => {
+      link.addEventListener('click', () => {
+        menuMobile.classList.add('hidden');
+        menuBtn.setAttribute('aria-expanded', 'false');
+        menuBtn.innerHTML = '<i data-lucide="menu"></i>';
+        lucide.createIcons();
+      });
+    });
+  }
+
+  // Formulário de contato
+  const form = document.getElementById('contato-form');
+  if (form) {
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      alert('Mensagem enviada com sucesso!');
+      form.reset();
+    });
+  }
 });

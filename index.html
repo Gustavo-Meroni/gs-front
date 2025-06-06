@@ -37,6 +37,8 @@
         <button
           id="btn-menu"
           aria-label="Abrir menu"
+          aria-expanded="false"
+          aria-controls="menu-mobile"
           class="md:hidden text-slate-200 hover:text-white focus:outline-none"
         >
           <i data-lucide="menu" class="w-8 h-8"></i>
@@ -81,36 +83,46 @@
     </header>
 
     <main class="pt-6 container mx-auto px-4 md:px-6">
-      <section id="sobre" class="pt-24 pb-12 bg-slate-100 text-gray-800">
+      <section
+        class="text-center py-16 max-w-4xl bg-white mx-auto rounded-lg shadow-lg mt-20"
+      >
+        <h1 class="text-3xl lg:text-4xl font-bold mb-6">
+          Bem-vindo ao Flood Tech
+        </h1>
+        <p class="text-base lg:text-lg text-gray-700 max-w-3xl mx-auto mb-8">
+          A solução inovadora que combina tecnologia, sensores inteligentes e
+          inteligência artificial para prevenir enchentes e salvar vidas.
+        </p>
+        <a
+          href="#solucao"
+          class="inline-block text-base lg:text-lg bg-blue-600 text-white text-center px-8 py-4 rounded-full hover:bg-blue-700 transition duration-300 shadow-md"
+          >Saiba Mais</a
+        >
+      </section>
+      <section id="sobre" class="py-16 bg-slate-100 text-gray-800">
         <div
-          class="container mx-auto px-4 flex flex-col-reverse md:flex-row items-center gap-8"
+          class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-8"
         >
           <div class="md:w-1/2 text-center md:text-left">
-            <h2 class="text-3xl font-bold mb-4 text-blue-700">
+            <h2 class="text-2xl lg:text-3xl font-bold mb-4 text-blue-700">
               Sobre o Projeto
             </h2>
-            <p class="text-lg text-gray-600 mb-4 leading-relaxed">
+            <p class="text-base lg:text-lg text-gray-600 mb-4 leading-relaxed">
               O <strong>Flood Tech</strong> nasceu para enfrentar o desafio das
               enchentes de forma inovadora e tecnológica. Nosso projeto combina
               sensores inteligentes, inteligência artificial e análise de dados
               para oferecer um sistema de monitoramento e alerta em tempo real,
               prevenindo tragédias e salvando vidas.
             </p>
-            <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+            <p class="text-base lg:text-lg text-gray-600 mb-6 leading-relaxed">
               Integrando informações de satélites, estações meteorológicas e
               sensores IoT, o Flood Tech prevê inundações antes que elas
               aconteçam, promovendo cidades mais seguras, resilientes e
               preparadas para o futuro.
             </p>
-            <a
-              href="#problema"
-              class="inline-block bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition duration-300 shadow-md"
-            >
-              Saiba Mais
-            </a>
           </div>
 
-          <div class="md:w-1/2 flex justify-center">
+          <div class="md:w-full lg:w-1/2 lg:w-1/2 flex justify-center">
             <img
               src="assets/sensores-monitoramento.png"
               alt="Sensor de monitoramento de alagamentos"
@@ -120,13 +132,18 @@
         </div>
       </section>
 
-      <section id="problema" class="py-16 bg-white text-gray-900 mt-6">
+      <section
+        id="problema"
+        class="py-16 bg-white text-gray-900 mt-6 rounded-md shadow-lg"
+      >
         <div class="container mx-auto px-6 lg:px-12 max-w-6xl">
-          <h2 class="text-3xl font-bold mb-8 text-center text-blue-700">
+          <h2
+            class="text-2xl lg:text-3xl font-bold mb-8 text-center text-blue-700"
+          >
             O Problema das Enchentes no Brasil
           </h2>
           <p
-            class="text-lg leading-relaxed max-w-3xl mx-auto text-center text-gray-700 mb-6"
+            class="text-base lg:text-lg leading-relaxed max-w-3xl mx-auto text-center text-gray-700 mb-6"
           >
             As enchentes representam uma das maiores ameaças ambientais e
             urbanas que impactam milhares de brasileiros todos os anos. Além dos
@@ -134,7 +151,7 @@
             segurança da população.
           </p>
           <p
-            class="text-lg leading-relaxed max-w-3xl mx-auto text-center text-gray-700 mb-6"
+            class="text-base lg:text-lg leading-relaxed max-w-3xl mx-auto text-center text-gray-700 mb-6"
           >
             Atualmente, as soluções disponíveis são frequentemente reativas e
             pouco integradas, dificultando a previsão e o alerta antecipado para
@@ -143,7 +160,7 @@
             tragédia anunciada.
           </p>
           <p
-            class="text-lg leading-relaxed max-w-xl mx-auto text-center text-gray-700"
+            class="text-base lg:text-lg leading-relaxed max-w-xl mx-auto text-center text-gray-700"
           >
             É fundamental modernizar os sistemas de prevenção, utilizando
             tecnologia e dados para proteger vidas e patrimônios, especialmente
@@ -152,32 +169,32 @@
         </div>
       </section>
 
-      <section id="solucao" class="py-20 bg-slate-100 text-gray-900">
+      <section id="solucao" class="py-16 bg-slate-100 text-gray-900">
         <div
           class="container mx-auto px-6 lg:px-12 max-w-7xl flex flex-col lg:flex-row items-center gap-12"
         >
-           <div class="w-full lg:w-1/2">
-            <h2 class="text-3xl font-bold mb-6 text-blue-700">
+          <div class="w-full lg:w-1/2">
+            <h2 class="text-2xl lg:text-3xl font-bold mb-6 text-blue-700">
               Nossa Solução Tecnológica
             </h2>
-            <p class="text-lg leading-relaxed mb-6 text-gray-700">
+            <p class="text-base lg:text-lg leading-relaxed mb-6 text-gray-700">
               O Flood Tech integra sensores IoT avançados, inteligência
               artificial e análise de dados em tempo real para detectar e prever
               riscos de enchentes antes que aconteçam.
             </p>
-            <p class="text-lg leading-relaxed mb-6 text-gray-700">
+            <p class="text-base lg:text-lg leading-relaxed mb-6 text-gray-700">
               O sistema unifica informações de satélites, estações
               meteorológicas e sensores no solo, enviando alertas imediatos por
               SMS e aplicativos para garantir que comunidades e autoridades
               possam agir rapidamente.
             </p>
-            <p class="text-lg leading-relaxed text-gray-700">
+            <p class="text-base lg:text-lg leading-relaxed text-gray-700">
               Essa combinação inovadora permite cidades mais preparadas, seguras
               e resilientes frente a desastres naturais.
             </p>
           </div>
 
-          <div class="md:w-1/2 flex justify-center">
+          <div class="md:w-full lg:w-1/2 flex justify-center">
             <img
               src="assets/solution-image.jpg"
               alt="Ilustração da solução Flood Tech"
@@ -189,10 +206,12 @@
 
       <section id="diferenciais" class="bg-slate-100 py-16">
         <div class="container mx-auto px-6 md:px-12 text-center">
-          <h2 class="text-3xl md:text-4xl font-bold text-blue-600 mb-4">
+          <h2 class="text-2xl lg:text-3xl font-bold text-blue-700 mb-4">
             Nossos Diferenciais
           </h2>
-          <p class="max-w-2xl mx-auto text-slate-600 mb-12">
+          <p
+            class="text-base lg:text-lg max-w-2xl mx-auto text-slate-600 mb-12"
+          >
             O Flood Tech não é apenas um sistema de monitoramento: é um conjunto
             de soluções inteligentes, integradas e adaptáveis para cidades mais
             seguras e resilientes.
@@ -205,10 +224,10 @@
               <div class="flex justify-center mb-4 text-blue-600">
                 <i data-lucide="activity" class="h-12 w-12"></i>
               </div>
-              <h3 class="text-lg font-semibold text-blue-600 mb-2">
+              <h3 class="text-base lg:text-lg font-semibold text-blue-600 mb-2">
                 Monitoramento em Tempo Real
               </h3>
-              <p class="text-slate-600">
+              <p class="text-sm lg:text-base text-slate-600">
                 Sensores IoT de alta precisão coletam dados continuamente,
                 garantindo respostas rápidas a alterações no nível da água e
                 risco de alagamento.
@@ -221,10 +240,10 @@
               <div class="flex justify-center mb-4 text-blue-600">
                 <i data-lucide="brain-circuit" class="h-12 w-12"></i>
               </div>
-              <h3 class="text-lg font-semibold text-blue-600 mb-2">
+              <h3 class="text-base lg:text-lg font-semibold text-blue-600 mb-2">
                 Inteligência Artificial
               </h3>
-              <p class="text-slate-600">
+              <p class="text-sm lg:text-base text-slate-600">
                 Algoritmos de IA processam dados meteorológicos e locais para
                 prever inundações, alertando antes que o pior aconteça.
               </p>
@@ -236,10 +255,10 @@
               <div class="flex justify-center mb-4 text-blue-600">
                 <i data-lucide="alert-circle" class="h-12 w-12"></i>
               </div>
-              <h3 class="text-lg font-semibold text-blue-600 mb-2">
+              <h3 class="text-base lg:text-lg font-semibold text-blue-600 mb-2">
                 Alertas Personalizados
               </h3>
-              <p class="text-slate-600">
+              <p class="text-sm lg:text-base text-slate-600">
                 Notificações automáticas via SMS e aplicativos móveis,
                 garantindo que todos estejam informados e seguros.
               </p>
@@ -248,10 +267,15 @@
         </div>
       </section>
 
-      <section id="video" class="py-20 bg-white text-gray-900">
+      <section
+        id="video"
+        class="py-16 bg-white text-gray-900 rounded-md shadow-lg"
+      >
         <div class="container mx-auto px-6 lg:px-12 max-w-4xl text-center">
-          <h2 class="text-3xl font-bold mb-8 text-blue-700">Vídeo Pitch</h2>
-          <p class="text-lg text-gray-700 mb-8 max-w-3xl mx-auto">
+          <h2 class="text-2xl lg:text-3xl font-bold mb-8 text-blue-700">
+            Vídeo Pitch
+          </h2>
+          <p class="text-base lg:text-lg text-gray-700 mb-8 max-w-3xl mx-auto">
             Assista ao nosso vídeo pitch para entender melhor como o Flood Tech
             está revolucionando a prevenção de enchentes com tecnologia e
             inovação.
@@ -288,21 +312,29 @@
 
       <section id="contato" class="py-20 bg-slate-100 text-gray-800">
         <div class="container mx-auto px-6 lg:px-12 max-w-4xl">
-          <h2 class="text-3xl font-bold mb-8 text-center text-blue-700">
+          <h2
+            class="text-2xl lg:text-3xl font-bold mb-8 text-center text-blue-700"
+          >
             Contato
           </h2>
-          <p class="text-lg text-gray-600 mb-8 text-center max-w-2xl mx-auto">
+          <p
+            class="text-base lg:text-lg text-gray-600 mb-8 text-center max-w-2xl mx-auto"
+          >
             Quer saber mais sobre o Flood Tech ou tem interesse em colaborar?
             Envie sua mensagem pelo formulário abaixo e responderemos o mais
             breve possível.
           </p>
+
           <form
+            id="contato-form"
             class="bg-white rounded-lg shadow-lg p-8"
             action="#"
             method="POST"
           >
             <div class="mb-6">
-              <label for="nome" class="block mb-2 font-semibold text-gray-700"
+              <label
+                for="nome"
+                class="block mb-2 font-semibold text-gray-700 text-base lg:text-lg"
                 >Nome</label
               >
               <input
@@ -310,12 +342,14 @@
                 id="nome"
                 name="nome"
                 required
-                class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600"
+                class="w-full text-base lg:text-lg px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600"
                 placeholder="Seu nome completo"
               />
             </div>
             <div class="mb-6">
-              <label for="email" class="block mb-2 font-semibold text-gray-700"
+              <label
+                for="email"
+                class="block mb-2 font-semibold text-gray-700 text-base lg:text-lg"
                 >Email</label
               >
               <input
@@ -323,14 +357,14 @@
                 id="email"
                 name="email"
                 required
-                class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600"
+                class="w-full text-base lg:text-lg px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600"
                 placeholder="seuemail@exemplo.com"
               />
             </div>
             <div class="mb-6">
               <label
                 for="mensagem"
-                class="block mb-2 font-semibold text-gray-700"
+                class="block mb-2 font-semibold text-gray-700 text-base lg:text-lg"
                 >Mensagem</label
               >
               <textarea
@@ -338,13 +372,13 @@
                 name="mensagem"
                 rows="5"
                 required
-                class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600"
+                class="w-full text-base lg:text-lg px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600"
                 placeholder="Escreva sua mensagem aqui..."
               ></textarea>
             </div>
             <button
               type="submit"
-              class="bg-blue-600 text-white font-semibold px-6 py-3 rounded-full hover:bg-blue-700 transition duration-300 shadow-md w-full"
+              class="bg-blue-600 text-white text-base lg:text-lg font-semibold px-6 py-3 rounded-full hover:bg-blue-700 transition duration-300 shadow-md w-full"
             >
               Enviar Mensagem
             </button>
@@ -356,7 +390,7 @@
       <div
         class="flex flex-col md:flex-row items-center justify-around gap-4 px-6"
       >
-        <p class="text-sm text-center md:text-left">
+        <p class="text-sm lg:text-base text-center md:text-left">
           &copy; 2025 Flood Tech. Todos os direitos reservados.
         </p>
         <div class="flex gap-4">
@@ -384,35 +418,12 @@
         </div>
       </div>
     </footer>
-    <script>
-      lucide.createIcons();
-    </script>
 
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
     <script>
       lucide.createIcons();
-
-      const btnMenu = document.getElementById('btn-menu');
-      const menuMobile = document.getElementById('menu-mobile');
-      const menuLinks = menuMobile.querySelectorAll('a');
-
-      btnMenu.addEventListener('click', () => {
-        menuMobile.classList.toggle('hidden');
-
-        menuLinks.forEach((link) => {
-          link.addEventListener('click', () => {
-            menuMobile.classList.add('hidden');
-          });
-        });
-
-        const icon = btnMenu.querySelector('i');
-        icon.setAttribute(
-          'data-lucide',
-          menuMobile.classList.contains('hidden') ? 'menu' : 'x',
-        );
-
-        lucide.createIcons();
-      });
     </script>
+
+    <script src="script.js"></script>
   </body>
 </html>
