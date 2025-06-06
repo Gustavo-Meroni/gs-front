@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   lucide.createIcons();
 
-  const menuBtn = document.getElementById('btn-menu'); // <- alterado aqui
+  const menuBtn = document.getElementById('btn-menu');
   const menuMobile = document.getElementById('menu-mobile');
 
   if (menuBtn && menuMobile) {
@@ -29,7 +29,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Formulário de contato
   const form = document.getElementById('contato-form');
   if (form) {
     form.addEventListener('submit', (event) => {
