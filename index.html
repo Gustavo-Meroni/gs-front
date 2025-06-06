@@ -4,35 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Flood Tech - Solução Inovadora</title>
-    <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Lucide Icons -->
     <script src="https://cdn.jsdelivr.net/npm/lucide@0.268.0/dist/lucide.min.js"></script>
   </head>
   <body class="bg-slate-100 text-gray-800">
-    <!-- HEADER -->
     <header
       class="fixed top-0 left-0 w-full bg-gradient-to-r from-blue-600 via-blue-500 to-blue-400 shadow-lg z-50"
     >
       <div
         class="container mx-auto px-4 sm:px-6 lg:px-12 flex items-center justify-between h-16"
       >
-        <!-- Logo + Nome -->
         <a href="#" class="flex items-center gap-2">
-          <img
-            src="assets/dropwater.svg"
-            alt="Logo do Projeto"
-            class="h-10 w-10 object-contain"
-          />
           <span
-            class="text-white text-xl sm:text-2xl font-semibold tracking-wide"
+            class="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold tracking-wide"
             >Flood Tech</span
           >
         </a>
 
-        <!-- Menu Desktop -->
         <nav
-          class="hidden md:flex gap-6 lg:gap-10 font-semibold text-slate-200"
+          class="hidden md:flex gap-4 sm:gap-6 lg:gap-10 font-semibold text-slate-200 text-sm sm:text-base lg:text-lg"
         >
           <a href="#sobre" class="hover:text-white transition">Sobre</a>
           <a href="#problema" class="hover:text-white transition">Problema</a>
@@ -44,7 +34,6 @@
           <a href="#contato" class="hover:text-white transition">Contato</a>
         </nav>
 
-        <!-- Botão Hamburger Mobile com ícone Lucide -->
         <button
           id="btn-menu"
           aria-label="Abrir menu"
@@ -54,10 +43,9 @@
         </button>
       </div>
 
-      <!-- Menu Mobile (inicialmente escondido) -->
       <nav
         id="menu-mobile"
-        class="hidden md:hidden bg-blue-900 shadow-lg border-t border-blue-800"
+        class="hidden md:hidden bg-blue-900 shadow-lg border-t border-blue-800 text-base sm:text-lg"
       >
         <a
           href="#sobre"
@@ -97,7 +85,6 @@
         <div
           class="container mx-auto px-4 flex flex-col-reverse md:flex-row items-center gap-8"
         >
-          <!-- Texto -->
           <div class="md:w-1/2 text-center md:text-left">
             <h2 class="text-3xl font-bold mb-4 text-blue-700">
               Sobre o Projeto
@@ -123,7 +110,6 @@
             </a>
           </div>
 
-          <!-- Imagem -->
           <div class="md:w-1/2 flex justify-center">
             <img
               src="assets/sensores-monitoramento.png"
@@ -170,7 +156,6 @@
         <div
           class="container mx-auto px-6 lg:px-12 max-w-7xl flex flex-col lg:flex-row items-center gap-12"
         >
-          <!-- Texto -->
           <div class="lg:w-1/2">
             <h2 class="text-3xl font-bold mb-6 text-blue-700">
               Nossa Solução Tecnológica
@@ -192,7 +177,6 @@
             </p>
           </div>
 
-          <!-- Espaço para imagem/ilustração -->
           <div class="md:w-1/2 flex justify-center">
             <img
               src="assets/solution-image.jpg"
@@ -213,9 +197,8 @@
             de soluções inteligentes, integradas e adaptáveis para cidades mais
             seguras e resilientes.
           </p>
- 
-          <div class="grid gap-8 md:grid-cols-3">
-            <!-- Diferencial 1 -->
+
+          <div class="grid gap-8 lg:grid-cols-3">
             <div
               class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition"
             >
@@ -231,8 +214,7 @@
                 risco de alagamento.
               </p>
             </div>
- 
-            <!-- Diferencial 2 -->
+
             <div
               class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition"
             >
@@ -247,8 +229,7 @@
                 prever inundações, alertando antes que o pior aconteça.
               </p>
             </div>
- 
-            <!-- Diferencial 3 -->
+
             <div
               class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition"
             >
@@ -370,23 +351,28 @@
           </form>
         </div>
       </section>
-      
-      <!-- Script para inicializar Lucide -->
-      <script>
-        lucide.createIcons();
-      </script>
     </main>
+
+    <script>
+      lucide.createIcons();
+    </script>
 
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
     <script>
-      // Inicializa os ícones Lucide
       lucide.createIcons();
 
       const btnMenu = document.getElementById('btn-menu');
       const menuMobile = document.getElementById('menu-mobile');
+      const menuLinks = menuMobile.querySelectorAll('a');
 
       btnMenu.addEventListener('click', () => {
         menuMobile.classList.toggle('hidden');
+
+        menuLinks.forEach((link) => {
+          link.addEventListener('click', () => {
+            menuMobile.classList.add('hidden');
+          });
+        });
 
         const icon = btnMenu.querySelector('i');
         icon.setAttribute(
@@ -394,7 +380,6 @@
           menuMobile.classList.contains('hidden') ? 'menu' : 'x',
         );
 
-        // Atualiza ícones do Lucide
         lucide.createIcons();
       });
     </script>
