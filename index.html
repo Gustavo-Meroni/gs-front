@@ -304,6 +304,72 @@
           </div>
         </div>
       </section>
+
+      <section id="contato" class="py-20 bg-slate-100 text-gray-800">
+        <div class="container mx-auto px-6 lg:px-12 max-w-4xl">
+          <h2 class="text-3xl font-bold mb-8 text-center text-blue-700">
+            Contato
+          </h2>
+          <p class="text-lg text-gray-600 mb-8 text-center max-w-2xl mx-auto">
+            Quer saber mais sobre o Flood Tech ou tem interesse em colaborar?
+            Envie sua mensagem pelo formulário abaixo e responderemos o mais
+            breve possível.
+          </p>
+          <form
+            class="bg-white rounded-lg shadow-lg p-8"
+            action="#"
+            method="POST"
+          >
+            <div class="mb-6">
+              <label for="nome" class="block mb-2 font-semibold text-gray-700"
+                >Nome</label
+              >
+              <input
+                type="text"
+                id="nome"
+                name="nome"
+                required
+                class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600"
+                placeholder="Seu nome completo"
+              />
+            </div>
+            <div class="mb-6">
+              <label for="email" class="block mb-2 font-semibold text-gray-700"
+                >Email</label
+              >
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600"
+                placeholder="seuemail@exemplo.com"
+              />
+            </div>
+            <div class="mb-6">
+              <label
+                for="mensagem"
+                class="block mb-2 font-semibold text-gray-700"
+                >Mensagem</label
+              >
+              <textarea
+                id="mensagem"
+                name="mensagem"
+                rows="5"
+                required
+                class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600"
+                placeholder="Escreva sua mensagem aqui..."
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              class="bg-blue-600 text-white font-semibold px-6 py-3 rounded-full hover:bg-blue-700 transition duration-300 shadow-md w-full"
+            >
+              Enviar Mensagem
+            </button>
+          </form>
+        </div>
+      </section>
       
       <!-- Script para inicializar Lucide -->
       <script>
